@@ -1,0 +1,35 @@
+Why are you taking the back-end class? What are your current expectations of the back-end class?
+I know that JavaScript is a powerful and popular computer language. I always want to learn more about it and since this is the post-part of this free training program, I would like to get the most out of it. And it would fun that I can make and host my own website.
+
+
+Before front-end class, did you have coding experience? What computer language(s) and how long ago?
+I took one computer science class during my university year. It was "Introduction to Programming C++". I notice C++ and JavaScript share a bit similarity, but I have forgotten most of it since the class was taken many years ago.
+
+
+What front-end topics did you find difficult or what did you struggle with?
+The loops-section is the most difficult concept for me to have to a clear understanding due to most of the loops are somewhat similar and sometimes the conditions in the statements are confusing. And more importantly, sometimes it is hard for me to figure out what is going to be console.log or output when functions and loops are involved.
+
+
+Did the front-end class meet your expectations? Explain how it did or did not.
+Yes, it meets my expectations well. I got to learn and understand the topics you covered. Especially, the html part, it was well structured and I have learned to build my webpages step by step, as well as Krita and Inkscape. I really enjoy the learning process.
+
+
+Are you switching careers or looking to add skills to your resume? Why?
+I think it is both. I hold a BA degree in Economics. And I have one year of I.T. experience from my previous job. And currently, I am unemployed, I would like to learn more about I.T. knowledge, so I can improve myself while I am trying to land a job somewhat I.T. related. 
+
+
+What books or other resources are you depending on outside of class to enhance your learning?
+At this moment, I am not reading books, but I sometimes I check out YouTube videos. I check out some topics on coding and making animation with Krita, just out of my curiosity. In addition, I watch my nephew's projects with using Scratch 3.0 (Coding for kids), when I have spare time, I do some coding on Scratch too.
+
+
+Other than HTML, CSS, and JavaScript, what other computer languages are you currently learning or are interested in learning? Why?
+I am not learning other computer languages, but I also want to learn about Python which it is the "trend". I think in order to get a good I.T. related job, I have to increase my knowledge from different coding languages and it is a good way to understand how different coding languages work, as well as their advantage and disadvantage.
+
+
+Where do you see the industry going in the future?
+Since the COVID-19 pandemic is still on-going, I think more I.T. related jobs will be created and required. It is good to learn about new tech, be tech savvy, and I can find a more stable job.
+
+
+After taking the back-end class do you plan or have already planned on continuing your learning in tech? What specifically do you plan on focusing?
+I plan on looking for a somewhat I.T. related job after I finish this training program. Since I am having my BA degree in Economics, my current dream job is about "IS Business Analyst-Assistant", I want to utilize my skills and knowledge. If time permits, I would like to take another training program and obtain more certificates. I believe it can help me as well as my career.
+
