@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+body {
+    font-family: 'Cookie', cursive;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    padding: 30px;
+    background-color: #b3e6ff;
+    color: blue;
+
+}
+
+h2 {
+    font-size: 45px;
+    background-color: #b3e6ff;
+    color: #00e600;
+}
+
+h3 {
+    font-size: 30px;
+    color:#a52a2a;
+}
+
+p {
+    font-size: 30px;
+    color: #00e600;
+}
+
+
+#main {
+    font-size: 30px;
+    background-color: #b8b894;
+    color: blue;
+}
+
+#title {
+    font-size: 60px;
+}
+
+#img-div {
+    width: auto;
+    height: auto;
+    padding: 1px;
+    background-color: cyan;
+}
+
+#image {
+    border-radius: 50%;
+    padding: 10px;
+    display: block;
+    max-width: 380px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+
+div#img-div img {
+    border-radius: 50%;
+    padding: 10px;
+    display: block;
+    max-width: 380px;
+    max-height: 600px;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+
+#img-caption {
+    font-size: 30px;
+    background-color: cyan;
+}
+
+#tribute-info {
+    font-size: 30px;
+    text-align: center;
+    background-color:#b3ffe0;
+}
+
+#tribute-link {
+    font-style: italic;
+    text-align: center;
+    background-color:#b8b894;
+}
+
+
+ul {
+    display: block;
+    list-style-type: disc;
+    text-align: center;
+}
+
+li {
+    text-align: left;
+    margin-left: 25%;
+    display: list-item;
+}
+
+#footer-rainbow {
+    height: 20px;
+    background-color:silver;
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    text-align: center;
+    font-size: 18px !important;
+    padding-top: 3px;
+}
+
