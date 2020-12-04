@@ -114,20 +114,19 @@ app.post("/sayHello", (request, response) => {
     response.send(responseObject);
 });
 
-// Grabs the latest 10 entries from the history object and sends it to the front end.
 app.post("/getPreviousEntries", (req, res) => {
-    
-    // Grab only the last 10 elements from the submissions array.
+
+
+    //11-24-2020, trying to capture the latest 10 entries only
     let slicedArray = history.submissions.slice(history.submissions.length - 10);
+    console.log(slicedArray);
 
-    //console.log(slicedArray);
 
-    // Package up the array into an object to send back.
+
     let dataToSendBack = {
        latestEntries: slicedArray
     };
 
-    // Send back the object.
     res.send(dataToSendBack);
 
 });

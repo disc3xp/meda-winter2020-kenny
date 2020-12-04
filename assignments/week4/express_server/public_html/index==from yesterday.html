@@ -1,0 +1,124 @@
+<!-- 11/16/2020 flexbox  -->
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Flexbox Example</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+
+
+  <style>
+    #normal {
+      width: 100%;
+      height: 200px;
+      background-color: green;
+    }
+
+    #normal1 {
+      width: 23%;
+      height: 150px;
+      background-color: fuchsia;
+    }
+
+    #normal2 {
+      width: 48%;
+      height: 150px;
+      background-color: fuchsia;
+    }
+
+    #normal3 {
+      width: 23%;
+      height: 150px;
+      background-color: fuchsia;
+    }
+
+
+    #normal1, #normal2, #normal3 {
+      display: inline-block;
+      margin-right: 1%;
+      margin-left: 1%;
+      margin-top: 25px;
+    }
+
+    /* ******************* */
+    /* flex-wrap = auto resize div/boxes?? for desktop, laptop, cellphone responsive-look !!*/
+    /* // if no flex-shrink, then children will move down to the next line if there is less space than the flex-basis. */
+    #flex {
+      /* //display flex tells the bowser that we are going to be using a flex box, this rule should be applied to the CONTAINER of the flex box */
+      display: flex;
+      height: 200px;
+      background-color: purple;
+      flex-wrap: wrap;
+    }
+
+    /* flexbox ==> deals what to do with all the free space */
+    /* flex-grow, if necessary....a proportion...DOES NOT detate the total, detate which one gets more FREE SPACE*/
+    /* flex-basis = making sure the div having the ?px width? we have*/
+    /* flex-shrink = Strink speed when resizing. how much space it sacrifice.  Here 4 vs 2, */
+
+    /* //flex-basic is the STARTING value for the flex box CHILDREN. */
+    /* // flex-grow tells us the RATIO of free space this child will get. You compare this number to the siblings to get a ratio. */
+    /* // flex-shrink is inverse of flex-grow, for when we have less space than the flex-basis, the higher the number compared to its siblings, the more free space it must sacrifice. */
+
+    #flex1, #flex2, #flex3 {
+      flex-grow: 1;
+      height: 150px;
+      background-color: orange;
+      margin-left: 10px;
+      margin-right: 10px;
+      flex-basis: 300px;
+      flex-shrink: 4;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    /* if flex-grow is set to 2, then 4=2+1+1 , 4 SPACE units here among free space (div took some space)*/
+    #flex2 {
+      /* flex-grow: 2;     */
+      flex-shrink: 1;
+    }
+
+    /* order = changing the order of the div/box. Here changing flex3 box, moving the box to the left*/
+
+    /* //order is order of the individual flex box child will assign its location relative tothe order of its siblings. All flex box children start with an order of 1. */
+    #flex3 {
+      order: -1;
+    }
+
+
+  </style>
+
+
+</head>
+
+<body>
+
+  <div id="normal">
+    <div id="normal1">
+
+    </div><div id="normal2">
+
+    </div><div id="normal3">
+
+    </div>
+  </div>
+
+  <div id="flex">
+    <div id="flex1"><p>This is a child 1.</p></div>
+      
+    <div id="flex2"><p>This is a child 2.</p></div>
+      
+    <div id="flex3"><p>This is a child 3.</p></div>
+      
+  </div>
+
+
+</body>
+</html>

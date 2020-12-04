@@ -6,6 +6,9 @@
     <title></title>
 
     <style>
+        p {
+            color: green;
+        }
     </style>
 
     <!-- jQuery CDN code -->
@@ -21,21 +24,53 @@
         <p></p>
     </div>
 
+
+    <!-- 11/23/2020 -->
     <div id="history">
         <p>Last 10 Entries</p>
-        <table>
-        </table>
+        <table></table>
     </div>
+
 
     <script>
         $(document).ready(() => {
             console.log("jQuery is ready!");
 
-            // Runs the getPreviousEntries POST request.
-            loadLatestEntries();
-            
-            $("#helloserver").click(() => {
 
+
+            // 11/23/2020
+            $.post("http://localhost:3000/getPreviousEntries", {}, (dataFromServer) => {
+                //console.log(dataFromServer.lastestEntries);
+
+
+                //get the last entry from the list of entries
+                let lastEntry = dataFromServer.latestEntries.pop();  // give you the last index
+                
+                //grab the data inside of the last entry's object
+                let winningNumber = lastEntry.winningNumber;
+                let userNumber = lastEntry.number;
+                let time = lastEntry.timestamp;
+
+                // Build the HTML for our web page.
+                let html = `<tr>  
+                                <td>${userNumber}</td>
+                                <td>${winningNumber}</td>
+                                <td>${time}</td>
+                            </tr>`; //use string literal    `    `, jeep auto creating the table itself.
+
+                // update the webpage with the previously mentioned HTML code.
+                $("#history table").append(html);
+
+
+
+            });
+            
+
+
+
+
+            $("#helloserver").click(() => {
+               
                 // Build an object to send to the backend/server.
                 let objectToSend = {
                     "message": "Hello",
@@ -54,9 +89,6 @@
                 // For the URL, it must have the protocol. If no port number, it will default to 80. And you must type the correct post method name
                 $.post("http://localhost:3000/sayHello", objectToSend, (data) => {
                     
-                    // Runs the getPreviousEntries POST request.
-                    loadLatestEntries();
-
                     if (data.error === true) {
 
                         $("#resultsBox > p").text("Unable to compare as value is out of the range of 1 to 10.");
@@ -82,59 +114,6 @@
             });
         
         });
-
-        function loadLatestEntries() {
-            // Sends a post request to get the "latest" entries from the server.
-            $.post("http://localhost:3000/getPreviousEntries", {}, (dataFromServer) => {
-                // console.log(dataFromServer.latestEntries);
-
-                // Holds the original length of our array for our loop, as we pop the array.
-                let totalEntries = dataFromServer.latestEntries.length;
-
-                // Empty out the previous rows of the table.
-                $("#history table").empty();
-
-                // Adds the table column names first.
-                $("#history table").append(`
-                <tr>
-                    <th>User's Number</th>
-                    <th>Winning Number</th>
-                    <th>Time submitted</th>
-                </tr>
-                `);
-
-                // For each entry that we recieve, we put it in a table row and append to the web page.
-                for (let i = 0; i < totalEntries; i++) {
-
-                    // Get the last entry from the list of entries
-                    let lastEntry = dataFromServer.latestEntries.pop();
-
-                    // Grab the data inside of the last entry's object.
-                    let winningNumber = lastEntry.winningNumber;
-                    let userNumber = lastEntry.number;
-                    let time = lastEntry.timestamp;
-
-                    // Create the date based on the milliseconds we got from the server entry.
-                    let dateObject = new Date(time);
-
-                    // Makes the date object readable for humans.
-                    let dateString = dateObject.toLocaleString();
-
-                    // Build the HTML for our web page.
-                    let html = `<tr>
-                                    <td>${userNumber}</td>
-                                    <td>${winningNumber}</td>
-                                    <td>${dateString}</td>
-                                </tr>`;
-
-                    // Update the webpage with the previously mentioned HTML code.
-                    $("#history table").append(html);
-
-                }
-
-            
-            });
-        }
     </script>
 </body>
 </html>
