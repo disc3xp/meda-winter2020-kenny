@@ -2,13 +2,18 @@ body {
     background-color: blanchedalmond;
 }
 
+
 #loading-icon {
-    display: none;
+   /* visibility: hidden;  */     /* this works pair for $("#loading-icon").css("visibility", "hidden");  */
+   display: none;  /* fadeIn and fadeOut NEED display: none  */
 }
 
 #submit-message {
-    display: none;
+    /* visibility: hidden; */    /* this work pair for $("#loading-icon").css("visibility", "hidden");  */
+    display: none; /* fadeIn and fadeOut NEED display: none  */
 }
+
+
 
 #loader {
     height: 26px;
@@ -37,18 +42,4 @@ body {
     position: relative;
     margin-block-start: 0;
     color: green;
-}
-
-#tasks {
-    width: 400px;
-    border: solid 1px grey;
-}
-
-#tasks tbody tr td:nth-child(5) {
-    position: absolute;
-}
-
-#tasks tbody tr td img {
-    display: none;
-    position: relative;
 }

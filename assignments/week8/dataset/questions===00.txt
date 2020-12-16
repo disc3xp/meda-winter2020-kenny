@@ -1,0 +1,29 @@
+
+City jobs steps
+https://data.sfgov.org/City-Management-and-Ethics/Hourly-Rates-of-Pay-by-Classification-and-Step/t59u-ig8c
+
+
+File location
+https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am
+
+VOID-19
+https://data.sfgov.org/COVID-19/COVID-19-Cases-and-Deaths-Summarized-by-Geography/tpyr-dvnc#
+
+
+1. What is the average percentage increase in salary per years for eah title?
+which title has the highest percentage increase year over year.
+which title has the lowest
+
+2. What title had a decrease in salary for each year?
+What union has the most members of these city jobs?
+
+3. What job title pays the most within each union code?
+4x. What is salary difference between Mayor and Librarian year to year.
+5. How many new jobs did each year have.
+check to see if title losses are also possible. Gone or New
+
+
+
+..
+How many jobs are only having 7 steps? And what are they?
+Which city job has the lowest wage among the first steps?

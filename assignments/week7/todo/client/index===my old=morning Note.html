@@ -8,9 +8,10 @@
     <link rel="icon" href="icon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css">
     <script src="scripts/jquery-3.5.1.min.js"></script>
     <script src="scripts/main.js"></script>
+
 </head>
 <body>
     <div id="new-note">
@@ -27,15 +28,16 @@
         </select><br />
         <label for="note-text">Note</label><br />
         <textarea rows="10" cols="50" id="note-text"></textarea><br />
+
+        <!-- adding <div> for submit-button and the loading-icon, so they can align together -->
         <div id="submit-area">
             <button id="submit">Save Todo Item</button>
         </div>
+        
         <div id="loader">
         <img id="loading-icon" src="images/822.gif" width="22" height="22" alt="Loading Icon" />
         </div>
-        <div id="message">
-            <p id="submit-message"></p>
-        </div>
+        <p id="submit-message"></p>
     </div>
 
     <div id="notes-list">
@@ -46,8 +48,7 @@
                     <th>Priority</th>
                     <th>Task</th>
                     <th>Notes</th>
-                    <th></th>
-                    <th></th>
+                    <th></th>  <!-- creating a Delete Button -->
                 </tr>
             </thead>
             <tbody>

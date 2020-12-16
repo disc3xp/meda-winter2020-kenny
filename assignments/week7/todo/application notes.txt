@@ -1,0 +1,55 @@
+A Todo Note should have the following information:
+Author (future feature)
+Title
+Note text
+Completed status
+Archived status
+Priority Level
+Categories (future feature)
+Timestamp
+Duedate (future feature)
+
+FRONT-END REQUEST OBJECT:
+{
+auther: Null
+title: String
+text: String
+completed: Boolean
+archived: Boolean
+priority: Number
+categories: Null
+timestamp: Number (milliseconds from Date Object)
+}
+
+BACK-END RESPONSE OBJECT:
+{
+saved: boolean
+savedTask: Object (saved document copy)
+error: String (future feature)
+}
+
+FRONT-END REQUEST:
+Name: newNote
+Send: Request Object Above
+Return: Response Object Above
+
+FRONT-END REQUEST:
+Name: getList
+Send: {}
+Return: {
+list: [ ...all documents ]
+error: String (future feature)
+}
+
+FRONT-END REQUEST:
+Name: modify
+Send: {
+id: String
+action: String (If String == delete, delete from database, if String == update, update that document
+data: Null or Object (based on action)
+}
+Return:
+{
+copy: Object (future feature: holds original task for undo)
+error: String (future feature)
+}

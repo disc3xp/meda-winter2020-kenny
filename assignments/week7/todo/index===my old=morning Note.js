@@ -1,17 +1,22 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+
+//exporting?
 const credentials = require("./credentials.js");
 
-const dbCredentials = credentials.dbURL;
+const dbCredentials = credentials.dbURL;  //a property
+//console.log(dbCredentials);
+//console.log(credentials.secretValue);
 const dbOptions = {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true};
-let dbConnection = mongoose.connect(dbCredentials, dbOptions, (error) => {
+let dbConnection = mongoose.connect(dbCredentials, dbOptions, (error) =>{
     if (error) {
         console.log("Mongoose error: " + error);
     } else {
         console.log("MongoDB connection opened.");
     }
 });
+
 
 let todoSchema = new mongoose.Schema({
     title: String,
@@ -24,6 +29,9 @@ let todoSchema = new mongoose.Schema({
 
 let todoModel = new mongoose.model("notecollections", todoSchema);
 
+
+
+
 const port = 3000;
 
 const app = express();
@@ -35,31 +43,31 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 console.log("Express server is running on port " + port);
 
+
 app.use("/", express.static("client/"));
 
+//Need 2 arguments: route and callback
 app.post("/newNote", (request, response) => {
-    
     const note = request.body;
-
-    // Sanitize Inputs
+    //console.log(typeof note.completed);
 
     let newNoteDocument = new todoModel({
         title: note.title,
         text: note.text,
-        completed: (note.completed === "true"),
-        archived: (note.archived === "true"),
-        priority: parseInt(note.priority),
-        timestamp: parseInt(note.timestamp)
+        completed: (note.completed === "true"), //wanted to be boolean
+        archived: (note.archived === "true"),   //wanted to be boolean
+        priority: parseInt(note.priority),  //wanted to be number
+        timestamp: parseInt(note.timestamp) //wanted to be number
     });
+
 
     newNoteDocument.save((error) => {
         
         const responseObject = {
             saved: false,
-            savedTask: newNoteDocument,
             error: null
         };
-
+        
         if (error) {
             response.send(responseObject);
         } else {
@@ -67,7 +75,10 @@ app.post("/newNote", (request, response) => {
             response.send(responseObject);
         }
     });
+
 });
+
+
 
 app.post("/getList", (request, response) => {
     todoModel.find({}, (error, results) => {
@@ -85,22 +96,20 @@ app.post("/getList", (request, response) => {
     });
 });
 
+
+
 app.post("/modify", (req, res) => {
-
     let request = req.body;
-
     if (request.action === "delete") {
-        todoModel.findByIdAndDelete(request.id, (error, deleted) => {
+        todoModel.findByIdAndDelete(request.id, (error, deleted) =>{
             if (error) {
-                console.log(error);
+                console.log(erro);
             } else {
                 let response = {
                     copy: deleted
                 }
-
                 res.send(response);
             }
         });
     }
-
 });
