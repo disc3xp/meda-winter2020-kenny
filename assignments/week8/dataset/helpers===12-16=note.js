@@ -1,3 +1,5 @@
+// 12-15-2020 , using helpers.js, helper function 
+
 function checkTitleCommas(titleArray) {
 
     if (titleArray[3].charAt(0) === '"') {

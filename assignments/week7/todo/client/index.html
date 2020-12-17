@@ -13,46 +13,64 @@
     <script src="scripts/main.js"></script>
 </head>
 <body>
-    <div id="new-note">
-        <h1>Create a new To-Do Task</h1>
-        <label for="note-title">Title</label><br />
-        <input type="text" id="note-title" /><br />
-        <label for="note-priority">Priority</label><br />
-        <select id="note-priority">
-            <option value="1">Level 1</option>
-            <option value="2">Level 2</option>
-            <option value="3">Level 3</option>
-            <option value="4">Level 4</option>
-            <option value="5">Level 5</option>
-        </select><br />
-        <label for="note-text">Note</label><br />
-        <textarea rows="10" cols="50" id="note-text"></textarea><br />
-        <div id="submit-area">
-            <button id="submit">Save Todo Item</button>
+    <div id="header">
+        <img src="images/logo.png" alt="mylogo" title="mylogo" class="logo" width="150" height="150" />
+
+    <h1>Thank you for using my To-do APP</h1>
+
+    <div id="content-container">
+        <div id="new-note">
+
+            <h2>Adding a new To-Do Task</h1>
+            <label for="note-title">Task:</label><br />
+            <input type="text" id="note-title" /><br />
+            <label for="note-priority">Priority:</label><br />
+            <select id="note-priority">
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+            </select><br />
+            <label for="note-text">Note:</label><br />
+            <textarea rows="10" cols="50" id="note-text"></textarea><br />
+            <div id="submit-area">
+                <button id="submit">Save To-do Item</button>
+            </div>
+            <div id="loader">
+            <img id="loading-icon" src="images/loading.gif" width="22" height="22" alt="Loading Icon" />
+            </div>
+            <div id="message">
+                <p id="submit-message"></p>
+            </div>
         </div>
-        <div id="loader">
-        <img id="loading-icon" src="images/822.gif" width="22" height="22" alt="Loading Icon" />
+
+
+        <div id="spacing">
+            <p>==></p>
         </div>
-        <div id="message">
-            <p id="submit-message"></p>
+
+
+        <div id="notes-list">
+            <h2>List of current To-Do Tasks</h1>
+            <table id="tasks" >
+                <thead>
+                    <tr>
+                        <th>Priority</th>
+                        <th>Task</th>
+                        <th>Note</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table><br /><br />
         </div>
     </div>
 
-    <div id="notes-list">
-        <h1>Current To-Do Tasks</h1>
-        <table id="tasks" >
-            <thead>
-                <tr>
-                    <th>Priority</th>
-                    <th>Task</th>
-                    <th>Notes</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
+    <div id="footer-rainbow">
+        Copyright © 2020 Kenny Chen. All Right Reserved.
     </div>
 </body>
 </html>
