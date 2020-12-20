@@ -68,7 +68,7 @@ function addToList(taskObject) {
             <td>${taskObject.title}</td>
             <td>${taskObject.text}</td>
             <td><button>Delete</button></td>
-            <td><img src="images/822.gif" width="22" height="22" alt="Loading Icon" /></td>
+            <td><img src="images/deleting.gif" width="22" height="22" alt="Deleting Icon" /></td>
         </tr>
     `;
 
